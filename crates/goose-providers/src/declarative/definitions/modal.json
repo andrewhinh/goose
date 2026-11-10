@@ -1,0 +1,23 @@
+{
+  "name": "modal",
+  "engine": "openai",
+  "display_name": "Modal",
+  "description": "OpenAI-compatible access to models hosted on Modal Endpoints. Model IDs are endpoint hostnames, e.g. my-endpoint.us-west.modal.direct.",
+  "api_key_env": "MODAL_PROXY_TOKEN",
+  "base_url": "https://inference.us-west.modal.direct/v1",
+  "models": [],
+  "dynamic_models": true,
+  "supports_streaming": true,
+  "model_doc_link": "https://modal.com/docs/guide/endpoints",
+  "setup_steps": [
+    "Run `modal workspace proxy-tokens create`",
+    "Join the token ID and secret with a period: wk-<id>.ws-<secret>",
+    "Paste the combined token as the API key"
+  ],
+  "setup": {
+    "category": "model",
+    "setup_method": "single_api_key",
+    "group": "additional",
+    "docs_url": "https://modal.com/docs/guide/endpoints"
+  }
+}
